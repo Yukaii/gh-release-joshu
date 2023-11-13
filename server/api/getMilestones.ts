@@ -37,6 +37,8 @@ export default defineEventHandler(async event => {
     }
   )
 
+  console.debug('milestones', data)
+
   return {
     statusCode: 200,
     body: JSON.stringify({

@@ -1,4 +1,4 @@
-import { App, Octokit } from "octokit"
+import { Octokit } from "octokit"
 import { decodeBase64 } from "~/utils/base64"
 import { createAppAuth } from "@octokit/auth-app"
 
