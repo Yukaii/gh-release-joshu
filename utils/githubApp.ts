@@ -1,11 +1,24 @@
-import { App } from "octokit"
+import { App, Octokit } from "octokit"
 import { decodeBase64 } from "~/utils/base64"
+import { createAppAuth } from "@octokit/auth-app"
 
 const config = useRuntimeConfig()
 
-const app = new App({
-  appId: config.appId,
-  privateKey: decodeBase64(config.githubAppPrivateKey),
-});
+// TODO: find installation from database with owner/repo
+async function findInstallationId (owner: string, repo: string) {
+  return config.developmentInstallationId
+}
 
-export default app
+export async function getOctokit (owner: string, repo: string) {
+  const installationOctokit = new Octokit({
+    authStrategy: createAppAuth,
+    auth: {
+      appId: config.appId,
+      privateKey: decodeBase64(config.githubAppPrivateKey),
+      installationId: await findInstallationId(owner, repo),
+    },
+  });
+
+
+  return installationOctokit
+}

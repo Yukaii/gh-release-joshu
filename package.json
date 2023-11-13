@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@nuxt/ui": "^2.10.0",
+    "@octokit/auth-app": "^6.0.1",
     "kysely": "^0.26.3",
     "octokit": "^3.1.1"
   }
