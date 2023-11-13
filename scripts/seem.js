@@ -5,7 +5,7 @@ dotenv.config()
 
 const smee = new SmeeClient({
   source: process.env.WEBHOOK_PROXY_URL,
-  target: 'http://localhost:3000/events',
+  target: 'http://localhost:3000/api/events',
   logger: console
 })
 
