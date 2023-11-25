@@ -1,75 +1,35 @@
-# Nuxt 3 Minimal Starter
+# gh-release-joshu
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+TBD: Yet another cool open source project.
 
 ## Setup
 
-Make sure to install the dependencies:
-
 ```bash
 # npm
-npm install
-
-# pnpm
 pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+cp .env.example .env
 ```
+
+## Config
+
+There're four config in `.env` file:
+
+```bash
+WEBHOOK_PROXY_URL=https://smee.io/xxxxxx
+GITHUB_APP_PRIVATE_KEY=base64 encoded private key: cat private-key.pem | base64 -b 0
+GITHUB_APP_ID=
+GITHUB_APP_DEVELOPMENT_INSTALLATION_ID=
+```
+
+* For `WEBHOOK_PROXY_URL`, you can use [smee.io](https://smee.io/) to create a webhook proxy.
+* For GitHub App, you can create one in GitHub App. You'll need to fill `GITHUB_APP_PRIVATE_KEY`, `GITHUB_APP_ID`
+* For `GITHUB_APP_DEVELOPMENT_INSTALLATION_ID`, once you install the GitHub App to your repo, you can get the installation id.
 
 ## Development Server
 
-Start the development server on `http://localhost:3000`:
-
 ```bash
 # npm
-npm run dev
-
-# pnpm
 pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+pnpm start-webhook-proxy
 ```
 
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
