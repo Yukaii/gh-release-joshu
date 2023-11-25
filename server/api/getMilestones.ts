@@ -1,4 +1,4 @@
-import { getOctokit } from "~/utils/githubApp";
+import { getOctokit } from "~/server/utils/githubApp";
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event);

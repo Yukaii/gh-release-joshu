@@ -1,5 +1,5 @@
 import { Octokit } from "octokit";
-import { decodeBase64 } from "~/utils/base64";
+import { decodeBase64 } from "~/server/utils/base64";
 import { createAppAuth } from "@octokit/auth-app";
 
 const config = useRuntimeConfig();
