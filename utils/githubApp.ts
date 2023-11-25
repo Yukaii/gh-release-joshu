@@ -1,15 +1,15 @@
-import { App, Octokit } from "octokit"
-import { decodeBase64 } from "~/utils/base64"
-import { createAppAuth } from "@octokit/auth-app"
+import { Octokit } from "octokit";
+import { decodeBase64 } from "~/utils/base64";
+import { createAppAuth } from "@octokit/auth-app";
 
-const config = useRuntimeConfig()
+const config = useRuntimeConfig();
 
 // TODO: find installation from database with owner/repo
-async function findInstallationId (owner: string, repo: string) {
-  return config.developmentInstallationId
+async function findInstallationId(owner: string, repo: string) {
+  return config.developmentInstallationId;
 }
 
-export async function getOctokit (owner: string, repo: string) {
+export async function getOctokit(owner: string, repo: string): Promise<Octokit> {
   const installationOctokit = new Octokit({
     authStrategy: createAppAuth,
     auth: {
@@ -19,6 +19,5 @@ export async function getOctokit (owner: string, repo: string) {
     },
   });
 
-
-  return installationOctokit
+  return installationOctokit;
 }
