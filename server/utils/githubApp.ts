@@ -5,7 +5,7 @@ import { createAppAuth } from "@octokit/auth-app";
 const config = useRuntimeConfig();
 
 // TODO: find installation from database with owner/repo
-async function findInstallationId(owner: string, repo: string) {
+async function findInstallationId(owner: string, repo: string): Promise<string> {
   return config.developmentInstallationId;
 }
 
