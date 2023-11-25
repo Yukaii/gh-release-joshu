@@ -8,12 +8,23 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "start-webhook-proxy": "node ./scripts/seem.js"
+    "start-webhook-proxy": "node ./scripts/seem.js",
+    "lint": "eslint --ignore-path .gitignore ."
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@typescript-eslint/eslint-plugin": "^6.12.0",
+    "@typescript-eslint/parser": "^6.12.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^40.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-vue": "^9.18.1",
     "nuxt": "^3.8.1",
+    "prettier": "^3.1.0",
     "smee-client": "^2.0.0",
+    "typescript": "5.2.2",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5"
   },
