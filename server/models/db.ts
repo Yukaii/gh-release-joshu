@@ -1,6 +1,6 @@
-import { Database } from './types' // this is the Database interface we defined earlier
-import { Pool } from 'pg'
-import { Kysely, PostgresDialect } from 'kysely'
+import { type Database } from "./types"; // this is the Database interface we defined earlier
+import { Pool } from "pg";
+import { Kysely, PostgresDialect } from "kysely";
 
 const config = useRuntimeConfig();
 
@@ -11,10 +11,9 @@ const dialect = new PostgresDialect({
     user: config.db.user,
     port: config.db.port,
     max: 10,
-  })
-})
+  }),
+});
 
 export const db = new Kysely<Database>({
   dialect,
-})
-
+});
