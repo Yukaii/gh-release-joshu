@@ -9,7 +9,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "start-webhook-proxy": "node ./scripts/seem.js",
-    "lint": "eslint --ignore-path .gitignore ."
+    "lint": "eslint --ignore-path .gitignore .",
+    "migrate": "tsx ./scripts/migrate.ts"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
@@ -21,6 +22,7 @@
     "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.18.1",
+    "kysely-migration-cli": "^0.2.3",
     "nuxt": "^3.8.1",
     "prettier": "^3.1.0",
     "smee-client": "^2.0.0",

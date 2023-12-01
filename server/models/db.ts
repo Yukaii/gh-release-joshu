@@ -9,7 +9,7 @@ const dialect = new PostgresDialect({
     database: config.db.database,
     host: config.db.host,
     user: config.db.user,
-    port: config.db.port,
+    port: parseInt(config.db.port, 10),
     max: 10,
   }),
 });
