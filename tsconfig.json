@@ -4,6 +4,7 @@
   "include": [
     ".eslintrc.cjs",
     "scripts/**/*",
+    "migrations/**/*",
     "utils/**/*",
     "ecosystem.config.cjs"
   ]

@@ -12,6 +12,8 @@ export interface GithubInstallationTable {
   target_id: number
   // User or Organization
   target_type: "User" | "Organization"
+
+  created_at: ColumnType<Date, Date, never>
 }
 
 export type GithubInstallation = Selectable<GithubInstallationTable>;
