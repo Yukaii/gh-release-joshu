@@ -41,7 +41,7 @@ async function main(): Promise<void> {
   const migrator = new Migrator({
     db,
     provider: new FileMigrationProvider({
-      migrationFolder: path.resolve(__dirname, "./migrations"),
+      migrationFolder: path.resolve(__dirname, "../migrations"),
       path,
       fs,
     }),
