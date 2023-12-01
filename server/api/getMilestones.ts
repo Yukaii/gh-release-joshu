@@ -1,3 +1,4 @@
+import type { Octokit } from "octokit";
 import { getOctokit } from "~/server/utils/githubApp";
 
 export default defineEventHandler(async (event) => {
@@ -5,26 +6,29 @@ export default defineEventHandler(async (event) => {
 
   // check body for repo name and owner
   if (!body) {
+    setResponseStatus(event, 400);
     return {
-      statusCode: 400,
-      body: JSON.stringify({
-        message: "No body provided",
-      }),
+      message: "No body provided",
     };
   }
 
   if (!body.repo || !body.owner) {
+    setResponseStatus(event, 400);
     return {
-      statusCode: 400,
-      body: JSON.stringify({
-        message: "No repo or owner provided",
-      }),
+      message: "No repo or owner provided",
     };
   }
 
   // GET ALL milestones
-
-  const octokit = await getOctokit(body.owner, body.repo);
+  let octokit: Octokit;
+  try {
+    octokit = await getOctokit(body.owner, body.repo);
+  } catch {
+    setResponseStatus(event, 404);
+    return {
+      message: "No valid installation found",
+    };
+  }
 
   const { data } = await octokit.request(
     "GET /repos/{owner}/{repo}/milestones",
@@ -38,9 +42,6 @@ export default defineEventHandler(async (event) => {
   );
 
   return {
-    statusCode: 200,
-    body: JSON.stringify({
-      data,
-    }),
+    milestones: data,
   };
 });
