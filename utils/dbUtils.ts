@@ -6,7 +6,7 @@ export function initDialect(dbConfig: {
   host: string
   user: string
   port: string
-}, max: number | undefined): PostgresDialect {
+}, max: number | undefined = undefined): PostgresDialect {
   return new PostgresDialect({
     pool: new pg.Pool({
       database: dbConfig.database,
