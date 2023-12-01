@@ -7,20 +7,20 @@ export interface Database {
 
 export interface GithubInstallationTable {
   // installation_id
-  id: ColumnType<number, number, never>
+  id: number
   app_id: number
   target_id: number
   // User or Organization
   target_type: "User" | "Organization"
 
-  created_at: ColumnType<Date, Date, never>
+  created_at: ColumnType<Date, Date | undefined, never>
 }
 
 export type GithubInstallation = Selectable<GithubInstallationTable>;
 export type NewGithubInstallation = Insertable<GithubInstallationTable>;
 
 export interface GitHubInstallationRepositoryTable {
-  id: ColumnType<number, number, never>
+  id: number
   installation_id: number
   full_name: string
   private: boolean
