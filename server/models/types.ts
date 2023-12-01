@@ -1,4 +1,4 @@
-import { ColumnType, Selectable, Insertable } from 'kysely'
+import { type ColumnType, type Selectable, type Insertable } from "kysely";
 
 export interface Database {
   github_installation: GithubInstallationTable
@@ -11,11 +11,11 @@ export interface GithubInstallationTable {
   app_id: number
   target_id: number
   // User or Organization
-  target_type: 'User' | 'Organization'
+  target_type: "User" | "Organization"
 }
 
-export type GithubInstallation = Selectable<GithubInstallationTable>
-export type NewGithubInstallation = Insertable<GithubInstallationTable>
+export type GithubInstallation = Selectable<GithubInstallationTable>;
+export type NewGithubInstallation = Insertable<GithubInstallationTable>;
 
 export interface GitHubInstallationRepositoryTable {
   id: ColumnType<number, number, never>
@@ -25,6 +25,7 @@ export interface GitHubInstallationRepositoryTable {
   private: boolean
 }
 
-export type GitHubInstallationRepository = Selectable<GitHubInstallationRepositoryTable>
-export type NewGitHubInstallationRepository = Insertable<GitHubInstallationRepositoryTable>
-
+export type GitHubInstallationRepository =
+  Selectable<GitHubInstallationRepositoryTable>;
+export type NewGitHubInstallationRepository =
+  Insertable<GitHubInstallationRepositoryTable>;
