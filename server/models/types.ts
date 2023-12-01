@@ -22,7 +22,6 @@ export type NewGithubInstallation = Insertable<GithubInstallationTable>;
 export interface GitHubInstallationRepositoryTable {
   id: ColumnType<number, number, never>
   installation_id: number
-  repository_id: number
   full_name: string
   private: boolean
 }
