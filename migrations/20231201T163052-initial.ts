@@ -15,7 +15,7 @@ export async function up(db: Kysely<any>): Promise<void> {
   await db.schema
     .createTable("github_installation_repository")
     .addColumn("id", "integer", (col) => col.primaryKey())
-    .addColumn("installation_id", "integer", (col) => col.notNull())
+    .addColumn("installation_id", "integer", (col) => col.notNull().references("github_installation.id"))
     .addColumn("full_name", "text", (col) => col.notNull())
     .addColumn("private", "boolean", (col) => col.notNull())
     .execute();
