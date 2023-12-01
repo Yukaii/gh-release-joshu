@@ -5,9 +5,8 @@ import {
   Migrator,
   FileMigrationProvider,
   Kysely,
-  PostgresDialect,
 } from "kysely";
-import pg from "pg";
+import { initDialect } from "~/utils/dbUtils";
 import { run } from "kysely-migration-cli";
 
 // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -25,14 +24,7 @@ async function main(): Promise<void> {
     }
   }).db;
 
-  const dialect = new PostgresDialect({
-    pool: new pg.Pool({
-      database: dbConfig.database,
-      host: dbConfig.host,
-      user: dbConfig.user,
-      port: parseInt(dbConfig.port, 10),
-    }),
-  });
+  const dialect = initDialect(dbConfig);
 
   const db = new Kysely<any>({
     dialect,
