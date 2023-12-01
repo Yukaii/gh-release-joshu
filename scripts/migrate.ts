@@ -1,4 +1,4 @@
-import { loadNuxt } from "nuxt/kit";
+import { loadNuxtConfig } from "nuxt/kit";
 import path from "path";
 import fs from "fs/promises";
 import {
@@ -14,9 +14,9 @@ import { run } from "kysely-migration-cli";
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
 async function main(): Promise<void> {
-  const nuxt = await loadNuxt({});
+  const config = await loadNuxtConfig({});
 
-  const dbConfig = (nuxt.options.runtimeConfig as unknown as {
+  const dbConfig = (config.runtimeConfig as unknown as {
     db: {
       database: string
       host: string
