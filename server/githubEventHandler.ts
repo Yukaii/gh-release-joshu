@@ -12,17 +12,18 @@ const installationCreatedEvent = async (
       target_id: event.installation.target_id,
       target_type: event.installation.target_type,
     })
-    .onConflict(oc => oc
-      .column("id")
-      .doUpdateSet({
+    .onConflict((oc) =>
+      oc.column("id").doUpdateSet({
         app_id: event.installation.app_id,
         target_id: event.installation.target_id,
         target_type: event.installation.target_type,
-      }))
+      }),
+    )
     .executeTakeFirst();
 
   // delete repositories created event treat as installation created
-  await db.deleteFrom("github_installation_repository")
+  await db
+    .deleteFrom("github_installation_repository")
     .where("installation_id", "=", event.installation.id)
     .execute();
 
@@ -35,12 +36,12 @@ const installationCreatedEvent = async (
         full_name: repository.full_name,
         private: repository.private,
       })
-      .onConflict(oc => oc
-        .column("id")
-        .doUpdateSet({
+      .onConflict((oc) =>
+        oc.column("id").doUpdateSet({
           full_name: repository.full_name,
           private: repository.private,
-        }))
+        }),
+      )
       .execute();
   }
 };
