@@ -20,6 +20,12 @@ export async function up(db: Kysely<any>): Promise<void> {
     .execute();
 
   await db.schema
+    .createIndex("github_installation_target_id_idx")
+    .on("github_installation")
+    .column("target_id")
+    .execute();
+
+  await db.schema
     .createTable("github_installation_repository")
     .addColumn("id", "integer", (col) => col.primaryKey())
     .addColumn("installation_id", "integer", (col) =>
