@@ -15,6 +15,7 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@octokit/webhooks-types": "^7.3.1",
+    "@sidebase/nuxt-auth": "0.6.2",
     "@types/pg": "^8.10.9",
     "@typescript-eslint/eslint-plugin": "^6.12.0",
     "@typescript-eslint/parser": "^6.12.0",
@@ -36,6 +37,7 @@
     "@nuxt/ui": "^2.10.0",
     "@octokit/auth-app": "^6.0.1",
     "kysely": "^0.26.3",
+    "next-auth": "4.21.1",
     "octokit": "^3.1.1",
     "pg": "^8.11.3"
   }
