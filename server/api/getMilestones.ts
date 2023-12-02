@@ -12,6 +12,8 @@ export default defineEventHandler(async (event) => {
     };
   }
 
+  // TODO: check permission based on whether user related github installation have access on specific repository
+
   const body = await readBody(event);
 
   // check body for repo name and owner
