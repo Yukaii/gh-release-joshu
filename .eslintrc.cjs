@@ -28,5 +28,6 @@ module.exports = {
     "@typescript-eslint/comma-dangle": ["error", "always-multiline"],
     "@typescript-eslint/strict-boolean-expressions": "off",
     "@typescript-eslint/space-before-function-paren": "off",
+    "@typescript-eslint/member-delimiter-style": "off",
   },
 };
