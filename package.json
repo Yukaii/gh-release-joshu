@@ -10,7 +10,8 @@
     "postinstall": "nuxt prepare",
     "start-webhook-proxy": "node ./scripts/seem.js",
     "lint": "eslint --ignore-path .gitignore .",
-    "migrate": "tsx ./scripts/migrate.ts"
+    "migrate": "tsx ./scripts/migrate.ts",
+    "fmt": "prettier --write ."
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
