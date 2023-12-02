@@ -1,7 +1,17 @@
 import type { Octokit } from "octokit";
 import { getOctokit } from "~/server/utils/githubApp";
+import { getServerSession } from "#auth";
 
 export default defineEventHandler(async (event) => {
+  const session = await getServerSession(event);
+
+  if (!session) {
+    setResponseStatus(event, 401);
+    return {
+      message: "not login",
+    };
+  }
+
   const body = await readBody(event);
 
   // check body for repo name and owner
