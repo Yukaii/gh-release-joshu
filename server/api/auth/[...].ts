@@ -7,6 +7,7 @@ const config = useRuntimeConfig();
 
 export default NuxtAuthHandler({
   adapter: KyselyAdapter(db),
+  secret: config.auth.secret,
   providers: [
     // @ts-expect-error You need to use .default here for it to work during SSR. May be fixed via Vite at some point
     GithubProvider.default({

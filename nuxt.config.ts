@@ -16,6 +16,7 @@ export default defineNuxtConfig({
       password: process.env.DB_PASSWORD,
     },
     auth: {
+      secret: process.env.AUTH_SECRET,
       github: {
         clientId: process.env.GITHUB_CLIENT_ID,
         clientSecret: process.env.GITHUB_CLIENT_SECRET,
