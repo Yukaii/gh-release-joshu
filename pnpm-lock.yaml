@@ -7,7 +7,7 @@ settings:
 dependencies:
   '@auth/kysely-adapter':
     specifier: ^0.1.8
-    version: 0.1.8(kysely@0.26.3)
+    version: 0.1.8(kysely@0.27.0)
   '@nuxt/ui':
     specifier: ^2.10.0
     version: 2.10.0(vue@3.3.8)(webpack@5.89.0)
@@ -15,8 +15,8 @@ dependencies:
     specifier: ^6.0.1
     version: 6.0.1
   kysely:
-    specifier: ^0.26.3
-    version: 0.26.3
+    specifier: ^0.27.0
+    version: 0.27.0
   next-auth:
     specifier: 4.21.1
     version: 4.21.1(next@13.5.6)(react-dom@18.2.0)(react@18.2.0)
@@ -131,13 +131,13 @@ packages:
       preact-render-to-string: 5.2.3(preact@10.11.3)
     dev: false
 
-  /@auth/kysely-adapter@0.1.8(kysely@0.26.3):
+  /@auth/kysely-adapter@0.1.8(kysely@0.27.0):
     resolution: {integrity: sha512-X5TqXmvvmGMqt/O9vkaqVHb/prf3OSo+DDSOORr6zx1rOAA645q2wHQvVHIIn0D3wm5p/B+jhZ2i8F21gcfi1Q==}
     peerDependencies:
       kysely: ^0.26.1
     dependencies:
       '@auth/core': 0.18.4
-      kysely: 0.26.3
+      kysely: 0.27.0
     transitivePeerDependencies:
       - nodemailer
     dev: false
@@ -5776,8 +5776,8 @@ packages:
       commander: 11.1.0
     dev: true
 
-  /kysely@0.26.3:
-    resolution: {integrity: sha512-yWSgGi9bY13b/W06DD2OCDDHQmq1kwTGYlQ4wpZkMOJqMGCstVCFIvxCCVG4KfY1/3G0MhDAcZsip/Lw8/vJWw==}
+  /kysely@0.27.0:
+    resolution: {integrity: sha512-wxOVru+SYTzofm59GlN0Tyo0v23qfX9pyU0n6Fc0GZZ5YldcyswenWsCoETqiJdtx7ThnxZpicqA2aqPMZV7DQ==}
     engines: {node: '>=14.0.0'}
     dev: false
 
