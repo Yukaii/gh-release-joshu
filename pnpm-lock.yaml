@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@auth/kysely-adapter':
-    specifier: ^0.1.8
-    version: 0.1.8(kysely@0.26.3)
+    specifier: ^0.6.0
+    version: 0.6.0(kysely@0.26.3)
   '@nuxt/ui':
     specifier: ^2.10.0
     version: 2.10.0(vue@3.3.8)(webpack@5.89.0)
@@ -115,15 +115,22 @@ packages:
   /@antfu/utils@0.7.6:
     resolution: {integrity: sha512-pvFiLP2BeOKA/ZOS6jxx4XhKzdVLHDhGlFEaZ2flWWYf2xOqVniqpk38I04DFRyz+L0ASggl7SkItTc+ZLju4w==}
 
-  /@auth/core@0.18.4:
-    resolution: {integrity: sha512-GsNhsP1xE/3FoNS3dVkPjqRljLNJ4iyL2OLv3klQGNvw3bMpROFcK4lqhx7+pPHiamnVaYt2vg1xbB+lsNaevg==}
+  /@auth/core@0.28.0:
+    resolution: {integrity: sha512-/fh/tb/L4NMSYcyPoo4Imn8vN6MskcVfgESF8/ndgtI4fhD/7u7i5fTVzWgNRZ4ebIEGHNDbWFRxaTu1NtQgvA==}
     peerDependencies:
+      '@simplewebauthn/browser': ^9.0.1
+      '@simplewebauthn/server': ^9.0.2
       nodemailer: ^6.8.0
     peerDependenciesMeta:
+      '@simplewebauthn/browser':
+        optional: true
+      '@simplewebauthn/server':
+        optional: true
       nodemailer:
         optional: true
     dependencies:
       '@panva/hkdf': 1.1.1
+      '@types/cookie': 0.6.0
       cookie: 0.6.0
       jose: 5.1.3
       oauth4webapi: 2.4.0
@@ -131,14 +138,16 @@ packages:
       preact-render-to-string: 5.2.3(preact@10.11.3)
     dev: false
 
-  /@auth/kysely-adapter@0.1.8(kysely@0.26.3):
-    resolution: {integrity: sha512-X5TqXmvvmGMqt/O9vkaqVHb/prf3OSo+DDSOORr6zx1rOAA645q2wHQvVHIIn0D3wm5p/B+jhZ2i8F21gcfi1Q==}
+  /@auth/kysely-adapter@0.6.0(kysely@0.26.3):
+    resolution: {integrity: sha512-WTWkaoS4cD7s5p/IsB/6cgJcC+qvEo+D/ix7l9YHajj0M4ZgJMKuqgWDER+gllc761jxAYfLizJ9d9DjgFFTPA==}
     peerDependencies:
       kysely: ^0.26.1
     dependencies:
-      '@auth/core': 0.18.4
+      '@auth/core': 0.28.0
       kysely: 0.26.3
     transitivePeerDependencies:
+      - '@simplewebauthn/browser'
+      - '@simplewebauthn/server'
       - nodemailer
     dev: false
 
@@ -2308,6 +2317,10 @@ packages:
 
   /@types/btoa-lite@1.0.2:
     resolution: {integrity: sha512-ZYbcE2x7yrvNFJiU7xJGrpF/ihpkM7zKgw8bha3LNJSesvTtUNxbpzaT7WXBIryf6jovisrxTBvymxMeLLj1Mg==}
+    dev: false
+
+  /@types/cookie@0.6.0:
+    resolution: {integrity: sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA==}
     dev: false
 
   /@types/eslint-scope@3.7.7:
