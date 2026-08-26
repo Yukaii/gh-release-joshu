@@ -18,8 +18,8 @@ dependencies:
     specifier: ^0.29.0
     version: 0.29.0
   next-auth:
-    specifier: 4.21.1
-    version: 4.21.1(next@13.5.6)(react-dom@18.2.0)(react@18.2.0)
+    specifier: 4.24.15
+    version: 4.24.15(next@13.5.6)(react-dom@18.2.0)(react@18.2.0)
   octokit:
     specifier: ^3.1.1
     version: 3.1.1
@@ -36,7 +36,7 @@ devDependencies:
     version: 7.3.1
   '@sidebase/nuxt-auth':
     specifier: 0.6.2
-    version: 0.6.2(next-auth@4.21.1)(vue@3.3.8)
+    version: 0.6.2(next-auth@4.24.15)(vue@3.3.8)
   '@types/pg':
     specifier: ^8.10.9
     version: 8.10.9
@@ -2177,7 +2177,7 @@ packages:
       picomatch: 2.3.1
       rollup: 3.29.4
 
-  /@sidebase/nuxt-auth@0.6.2(next-auth@4.21.1)(vue@3.3.8):
+  /@sidebase/nuxt-auth@0.6.2(next-auth@4.24.15)(vue@3.3.8):
     resolution: {integrity: sha512-gD3noKzbQ+X7fux3F7Sjx5dPAxb420GH4g/naT5Rjn3t+E0xjSIQi7AFVaPDYCYyKYth5W1cKvz7jUPMcCeNdw==}
     peerDependencies:
       next-auth: ^4.21.1
@@ -2187,7 +2187,7 @@ packages:
       defu: 6.1.3
       h3: 1.9.0
       knitwork: 1.0.0
-      next-auth: 4.21.1(next@13.5.6)(react-dom@18.2.0)(react@18.2.0)
+      next-auth: 4.24.15(next@13.5.6)(react-dom@18.2.0)(react@18.2.0)
       nitropack: 2.7.2
       requrl: 3.0.2
       ufo: 1.3.2
@@ -3666,14 +3666,14 @@ packages:
   /cookie-es@1.0.0:
     resolution: {integrity: sha512-mWYvfOLrfEc996hlKcdABeIiPHUPC6DM2QYZdGGOvhOTbA3tjm2eBwqlJpoFdjC89NI4Qt6h0Pu06Mp+1Pj5OQ==}
 
-  /cookie@0.5.0:
-    resolution: {integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==}
-    engines: {node: '>= 0.6'}
-
   /cookie@0.6.0:
     resolution: {integrity: sha512-U71cyTamuh1CRNCfpGY6to28lxvNwPG4Guz/EVjgf3Jmzv0vlDp1atT9eS5dDjMYHucpHbWns6Lwf3BKz6svdw==}
     engines: {node: '>= 0.6'}
     dev: false
+
+  /cookie@0.7.2:
+    resolution: {integrity: sha512-yki5XnKuf750l50uGTllt6kKILY4nQ1eNIQatoXEByZ5dWgnKqbnqmTrBE5B4N7lrMJKQ2ytWMiTO2o0v6Ew/w==}
+    engines: {node: '>= 0.6'}
 
   /cookies@0.8.0:
     resolution: {integrity: sha512-8aPsApQfebXnuI+537McwYsDtjVxGm8gTIzQI3FDW6t5t/DAhERxtnbEPN/8RX+uZthoz4eCOgloXaE5cYyNow==}
@@ -5581,8 +5581,8 @@ packages:
     resolution: {integrity: sha512-gFqAIbuKyyso/3G2qhiO2OM6shY6EPP/R0+mkDbyspxKazh8BXDC5FiFsUjlczgdNz/vfra0da2y+aHrusLG/Q==}
     hasBin: true
 
-  /jose@4.15.4:
-    resolution: {integrity: sha512-W+oqK4H+r5sITxfxpSU+MMdr/YSWGvgZMQDIsNoBDGGy4i7GBPTtvFKibQzW06n3U3TqHjhvBJsirShsEJ6eeQ==}
+  /jose@4.15.9:
+    resolution: {integrity: sha512-1vUQX+IdDMVPj4k8kOxgUqlcK518yluMuGZwqlr44FS1ppZB/5GWh4rZG89erpOBOJjU/OBsnCVFfapsRz6nEA==}
 
   /jose@5.1.3:
     resolution: {integrity: sha512-GPExOkcMsCLBTi1YetY2LmkoY559fss0+0KVa6kOfb2YFe84nAM7Nm/XzuZozah4iHgmBGrCOHL5/cy670SBRw==}
@@ -6263,21 +6263,24 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: false
 
-  /next-auth@4.21.1(next@13.5.6)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-NYkU4jAPSVxWhCblE8dDFAnKM7kOoO/QEobQ0RoEVP9Wox99A3PKHwOAsWhSg8ahJG/iKIWk2Bo1xHvsS4R39Q==}
+  /next-auth@4.24.15(next@13.5.6)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-NnjYtjrSOAx/TIVFGTX4IfI/9yHnNpi4B7FuLUwuV20v2Zxgr2OGP/YN0ynJuI7y8QOnTBPitfOdEXZrVvhIuA==}
     peerDependencies:
-      next: ^12.2.5 || ^13
-      nodemailer: ^6.6.5
-      react: ^17.0.2 || ^18
-      react-dom: ^17.0.2 || ^18
+      '@auth/core': 0.34.3
+      next: ^12.2.5 || ^13 || ^14 || ^15 || ^16
+      nodemailer: ^7.0.7
+      react: ^17.0.2 || ^18 || ^19
+      react-dom: ^17.0.2 || ^18 || ^19
     peerDependenciesMeta:
+      '@auth/core':
+        optional: true
       nodemailer:
         optional: true
     dependencies:
       '@babel/runtime': 7.23.5
       '@panva/hkdf': 1.1.1
-      cookie: 0.5.0
-      jose: 4.15.4
+      cookie: 0.7.2
+      jose: 4.15.9
       next: 13.5.6(@babel/core@7.23.3)(react-dom@18.2.0)(react@18.2.0)
       oauth: 0.9.15
       openid-client: 5.6.1
@@ -6285,7 +6288,7 @@ packages:
       preact-render-to-string: 5.2.6(preact@10.19.2)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      uuid: 8.3.2
+      uuid: 11.1.1
 
   /next@13.5.6(@babel/core@7.23.3)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-Y2wTcTbO4WwEsVb4A8VSnOsG1I9ok+h74q0ZdxkwM3EODqrs4pasq7O0iUxbcS9VtWMicG7f3+HAj0r1+NtKSw==}
@@ -6883,7 +6886,7 @@ packages:
   /openid-client@5.6.1:
     resolution: {integrity: sha512-PtrWsY+dXg6y8mtMPyL/namZSYVz8pjXz3yJiBNZsEdCnu9miHLB4ELVC85WvneMKo2Rg62Ay7NkuCpM0bgiLQ==}
     dependencies:
-      jose: 4.15.4
+      jose: 4.15.9
       lru-cache: 6.0.0
       object-hash: 2.2.0
       oidc-token-hash: 5.0.3
@@ -9011,8 +9014,8 @@ packages:
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
-  /uuid@8.3.2:
-    resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+  /uuid@11.1.1:
+    resolution: {integrity: sha512-vIYxrBCC/N/K+Js3qSN88go7kIfNPssr/hHCesKCQNAjmgvYS2oqr69kIufEG+O4+PfezOH4EbIeHCfFov8ZgQ==}
     hasBin: true
 
   /validate-npm-package-license@3.0.4:
